@@ -1,0 +1,111 @@
+<html>
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+
+      <script
+        crossorigin
+        src="https://unpkg.com/react@18/umd/react.development.js"
+      ></script>
+      <script
+        crossorigin
+        src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      ></script>
+      <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+      <style>
+        /* Styles for the page */
+        body {
+          font-family: Arial, sans-serif;
+          background-image: 
+          background-size: cover;
+          margin: 0;
+          padding: 0;
+        }
+
+        /* Styles for root1 content (plain JavaScript) */
+        #root1 {
+          margin: 20px;
+          padding: 20px;
+          background-color: #e0f7fa;
+          border-radius: 8px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #root1 h1 {
+          color: #00796b;
+          font-size: 24px;
+          text-align: center;
+        }
+
+        /* Styles for root2 content (React JSX) */
+        #root2 {
+          margin: 20px;
+          padding: 20px;
+          background-color: rgb(63, 221, 227);
+          border-radius: 8px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #root2 h1 {
+          color: #f57c00;
+          font-size: 28px;
+          text-align: center;
+        }
+      </style>
+    </head>
+
+    <body>
+      <div id="root1"></div>
+      <div id="root2"></div>
+      <div id="root3"></div>
+
+      <script type="text/javascript">
+        let rt1 = document.getElementById("root1");
+        let header1 = document.createElement("h1");
+
+        header1.innerText = "About React!!!   ";
+
+        rt1.appendChild(header1);
+      </script>
+
+      <script type="text/jsx">
+        let rt2 = document.getElementById("root2");
+     
+        ReactDOM.render(
+            <>
+                <h1>React with JSX!!</h1>
+                <p>This is an additional statement in the root2 div.</p>
+            </>,
+            rt2
+        );
+
+
+
+      </script>
+
+      <script type="text/jsx">
+        let rt3 = document.getElementById("root3");
+     
+        ReactDOM.render(
+            <>
+                <h1>React with JSX!!</h1>
+                <p>This is an additional statement in the root3 div.</p>
+            </>,
+            rt3
+        );
+
+
+
+      </script>
+
+
+
+
+
+    </body>
+  </html>
+</html>
